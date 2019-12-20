@@ -6,7 +6,7 @@
 /*   By: jvan-sni <jvan-sni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/17 12:27:11 by jvan-sni       #+#    #+#                */
-/*   Updated: 2019/12/17 18:30:02 by jvan-sni      ########   odam.nl         */
+/*   Updated: 2019/12/20 13:54:49 by jvan-sni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ extern int		hello_world(void);
 
 extern size_t	ft_strlen(char *str);
 extern ssize_t	ft_write(int fd, char *str, size_t len);
+extern ssize_t	ft_read(int fd, char *buf, size_t len);
 extern char		*ft_strcpy(char *dst, char *src);
 
 #endif

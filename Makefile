@@ -6,7 +6,7 @@
 #    By: jvan-sni <jvan-sni@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/11/27 14:03:19 by jvan-sni       #+#    #+#                 #
-#    Updated: 2019/12/17 17:39:26 by jvan-sni      ########   odam.nl          #
+#    Updated: 2019/12/20 13:54:13 by jvan-sni      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRC_FOLDER = src/
 SRC_FILES = test.s \
 			ft_strlen.s \
 			ft_write.s \
+			ft_read.s \
 			ft_strcpy.s
 
 TEST_FOLDER = test/
