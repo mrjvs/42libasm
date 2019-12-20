@@ -9,7 +9,7 @@ _ft_strlen:
 	mov	rbx, [rdi+rax]			; move current char into register B
 	cmp	bl, 0					; compare register B with 0 byte
 	je	.return					; return the value
-	inc	rax						; increment return value by 1
+	add	rax, 1					; increment return value by 1
 	jmp	.loop					; jump back to start of loop
 .return:
 	ret							; return
