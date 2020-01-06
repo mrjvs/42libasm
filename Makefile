@@ -6,7 +6,7 @@
 #    By: jvan-sni <jvan-sni@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/11/27 14:03:19 by jvan-sni       #+#    #+#                 #
-#    Updated: 2019/12/20 17:04:33 by jvan-sni      ########   odam.nl          #
+#    Updated: 2020/01/06 12:12:50 by jvan-sni      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,13 @@ SRC_FILES = test.s \
 			ft_strcmp.s
 
 TEST_FOLDER = test/
-TEST_FILES = main.c
+TEST_FILES = main.c \
+			test_ft_read.c \
+			test_ft_write.c \
+			test_ft_strlen.c \
+			test_ft_strcpy.c \
+			test_ft_strdup.c \
+			test_ft_strcmp.c \
 
 
 ################################ MAKEFILE LOGIC ################################

@@ -3,12 +3,8 @@ section .text
 
 _ft_strcpy:
 	mov rax, 0
-	cmp	rdi, 0					; compare DST with NULL pointer
-	je	.return					; return the value if NULL pointer
-	cmp	rsi, 0					; compare SRC with NULL pointer
-	je	.return					; return the value if NULL pointer
 	mov	rax, rdi				; set return value to DST
-.loop:	
+.loop:
 	mov	bl, byte [rsi]			; copy SRC char into register B
 	mov	[rdi], byte bl			; copy register B into DST
 	cmp	bl, byte 0				; compare register B with 0 byte

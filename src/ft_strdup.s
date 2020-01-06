@@ -6,8 +6,6 @@ section .text
 
 _ft_strdup:
 	mov rax, 0					; initalize to 0
-	cmp	rdi, 0					; compare SRC with NULL pointer
-	je	.return					; return the value if NULL pointer
 	mov	rax, rdi				; set return value to DST
 
 	push rdi					; add new parameter to stack
@@ -16,9 +14,7 @@ _ft_strdup:
 
 	push rdi					; add new parameter to stack
 	mov rdi, rax				; set parameter to string length
-
-	; TODO - increment length for 0 byte
-
+	add rdi, 1					; increment length for 0 char
 	call _malloc				; call malloc
 	pop rdi						; pop parameter
 

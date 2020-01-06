@@ -3,10 +3,6 @@ section .text
 
 _ft_strcmp:
 	mov	rax, 0					; set initial index to 0 (and return value
-	cmp	rdi, 0					; compare STR1 with NULL pointer
-	je	.return					; return the value if NULL pointer
-	cmp	rsi, 0					; compare STR2 with NULL pointer
-	je	.return					; return the value if NULL pointer
 	mov	rbx, 0					; set initial value to 0, to avoid big size comparisions
 .loop:	
 	mov	bl, byte [rdi+rax]		; move current char into register B
