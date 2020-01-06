@@ -5,9 +5,6 @@ section .text
 	global	_ft_strdup			; set function as global
 
 _ft_strdup:
-	mov rax, 0					; initalize to 0
-	mov	rax, rdi				; set return value to DST
-
 	push rdi					; add new parameter to stack
 	call _ft_strlen				; call strlen
 	pop rdi						; pop parameter
@@ -17,12 +14,14 @@ _ft_strdup:
 	add rdi, 1					; increment length for 0 char
 	call _malloc				; call malloc
 	pop rdi						; pop parameter
+	cmp	rax, 0					; check if malloc return is NULL pointer
+	je	.return					; return NULL if malloc failed
 
 	mov rcx, 0					; initialize to 0
 .loop:	
-	mov	bl, byte [rdi+rcx]		; copy SRC char into register B
-	mov	[rax+rcx], byte bl		; copy register B into OUT
-	cmp	bl, byte 0				; compare register B with 0 byte
+	mov	bl, BYTE [rdi+rcx]		; copy SRC char into register B
+	mov	[rax+rcx], BYTE bl		; copy register B into OUT
+	cmp	bl, BYTE 0				; compare register B with 0 byte
 	je	.return					; jump to return if true
 	add	rcx, 1					; increment index
 	jmp	.loop					; jump back to start of loop

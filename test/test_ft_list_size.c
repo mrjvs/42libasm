@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   libasm_test.h                                      :+:    :+:            */
+/*   test_ft_list_size.c                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jvan-sni <jvan-sni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/01/06 12:00:20 by jvan-sni       #+#    #+#                */
-/*   Updated: 2020/01/06 17:30:10 by jvan-sni      ########   odam.nl         */
+/*   Created: 2020/01/06 14:27:07 by jvan-sni       #+#    #+#                */
+/*   Updated: 2020/01/06 14:35:07 by jvan-sni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBASM_TEST_H
-# define LIBASM_TEST_H
+#include <libasm.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-void	test_ft_read(void);
-void	test_ft_write(void);
-void	test_ft_strlen(void);
-void	test_ft_strcpy(void);
-void	test_ft_strdup(void);
-void	test_ft_strcmp(void);
+void	test_ft_list_size(void)
+{
+	t_list list1;
+	t_list list2;
+	t_list list3;
 
-void	test_ft_list_size(void);
-void	test_ft_list_push_front(void);
-void	test_ft_list_remove_if(void);
-
-#endif
+	list1.next = &list2;
+	list1.data = "HALLO";
+	list2.next = &list3;
+	list2.data = "HALLO2";
+	list3.next = NULL;
+	list3.data = "HALLO3";
+	printf("%zu", ft_list_size(&list1));
+}
