@@ -2,7 +2,6 @@
 *.o
 
 # dev files
-cheatsheet.md
 testing
 
 # output
