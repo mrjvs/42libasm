@@ -6,7 +6,7 @@
 /*   By: jvan-sni <jvan-sni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/17 12:27:11 by jvan-sni       #+#    #+#                */
-/*   Updated: 2020/01/06 17:28:05 by jvan-sni      ########   odam.nl         */
+/*   Updated: 2020/01/07 18:26:59 by jvan-sni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,14 @@ struct			s_list
 };
 
 extern size_t	ft_list_size(t_list *begin_list) asm("_ft_list_size");
+
 extern void		ft_list_push_front(t_list **begin_list, void *data)
 	asm("_ft_list_push_front");
+
 extern void		ft_list_remove_if(
 	t_list **begin_list, void *data_ref, int (*cmp)()) asm("_ft_list_remove_if");
+
+extern void		ft_list_sort(t_list **begin_list, int (*cmp)())
+	asm("_ft_list_sort");
 
 #endif

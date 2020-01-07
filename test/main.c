@@ -6,23 +6,12 @@
 /*   By: jvan-sni <jvan-sni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/17 12:13:03 by jvan-sni       #+#    #+#                */
-/*   Updated: 2020/01/06 17:37:52 by jvan-sni      ########   odam.nl         */
+/*   Updated: 2020/01/07 18:25:50 by jvan-sni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libasm_test.h"
 #include <string.h>
-
-void		test_all()
-{
-	test_ft_read();
-	test_ft_write();
-	test_ft_strlen();
-	test_ft_strdup();
-	test_ft_strcpy();
-	test_ft_strcmp();
-	test_ft_list_size();
-}
 
 int			main(int argc, char *argv[])
 {
@@ -46,7 +35,7 @@ int			main(int argc, char *argv[])
 		test_ft_list_push_front();
 	else if (strcmp(argv[1], "ft_list_remove_if") == 0)
 		test_ft_list_remove_if();
-	else if (strcmp(argv[1], "all") == 0)
-		test_all();
+	else if (strcmp(argv[1], "ft_list_sort") == 0)
+		test_ft_list_sort();
 	return (0);
 }
