@@ -6,7 +6,7 @@
 /*   By: jvan-sni <jvan-sni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/01/06 14:27:07 by jvan-sni       #+#    #+#                */
-/*   Updated: 2020/01/07 18:28:55 by jvan-sni      ########   odam.nl         */
+/*   Updated: 2020/01/09 18:32:22 by jvan-sni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 static int	compare(int *i, int *j)
 {
-	return (*i < *j);
+	return (*i - *j);
 }
 
 static void	print_ft_list(t_list *lst)
@@ -26,7 +26,7 @@ static void	print_ft_list(t_list *lst)
 		printf("%s", (char *)lst);
 	while (lst)
 	{
-		printf("-> '%s' ", (char *)lst->data);
+		printf("-> '%i' ", *((int *)lst->data));
 		lst = lst->next;
 	}
 	printf("\n");
@@ -49,6 +49,11 @@ void		test_ft_list_sort(void)
 	list3.next = NULL;
 	list3.data = &three;
 	lst = &list1;
+	printf("PTRS %p\n %p\n %p\n\n", &one, &two, &three);
+	print_ft_list(lst);
+	ft_list_sort(&lst, compare);
+	print_ft_list(lst);
+	lst = NULL;
 	print_ft_list(lst);
 	ft_list_sort(&lst, compare);
 	print_ft_list(lst);
