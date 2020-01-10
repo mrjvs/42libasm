@@ -6,7 +6,7 @@
 /*   By: jvan-sni <jvan-sni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/17 12:27:11 by jvan-sni       #+#    #+#                */
-/*   Updated: 2020/01/07 18:26:59 by jvan-sni      ########   odam.nl         */
+/*   Updated: 2020/01/10 12:21:38 by jvan-sni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ extern void		ft_list_remove_if(
 
 extern void		ft_list_sort(t_list **begin_list, int (*cmp)())
 	asm("_ft_list_sort");
+
+extern int		ft_atoi_base(char *str, char *base) asm("_ft_atoi_base");
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jvan-sni <jvan-sni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/17 12:13:03 by jvan-sni       #+#    #+#                */
-/*   Updated: 2020/01/07 18:25:50 by jvan-sni      ########   odam.nl         */
+/*   Updated: 2020/01/10 12:34:30 by jvan-sni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ int			main(int argc, char *argv[])
 		test_ft_list_remove_if();
 	else if (strcmp(argv[1], "ft_list_sort") == 0)
 		test_ft_list_sort();
+	else if (strcmp(argv[1], "ft_atoi_base") == 0)
+		test_ft_atoi_base();
 	return (0);
 }
