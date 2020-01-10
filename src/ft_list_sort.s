@@ -15,7 +15,7 @@ _ft_list_sort:
 	je .return
 
 	mov r9, 0					; set list size counter to 0
-	mov rax, QWORD [rdi]		; move derefrenced list to rax to count
+	mov rax, rdi				; move derefrenced list to rax to count
 .sizeloop:
 	cmp QWORD [rax+8], 0		; check if list->next is NULL pointer, return if it is
 	je .listloop

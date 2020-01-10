@@ -6,7 +6,7 @@
 #    By: jvan-sni <jvan-sni@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/11/27 14:03:19 by jvan-sni       #+#    #+#                 #
-#    Updated: 2020/01/06 17:38:19 by jvan-sni      ########   odam.nl          #
+#    Updated: 2020/01/10 11:15:10 by jvan-sni      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ SRC_FILES = ft_strlen.s \
 			ft_strcmp.s \
 			ft_list_size.s \
 			ft_list_push_front.s \
-			ft_list_remove_if.s
+			ft_list_remove_if.s \
+			ft_list_sort.s
 
 TEST_FOLDER = test/
 TEST_FILES = main.c \
@@ -45,7 +46,8 @@ TEST_FILES = main.c \
 			test_ft_strcmp.c \
 			test_ft_list_size.c \
 			test_ft_list_push_front.c \
-			test_ft_list_remove_if.c
+			test_ft_list_remove_if.c \
+			test_ft_list_sort.c
 
 
 ################################ MAKEFILE LOGIC ################################
